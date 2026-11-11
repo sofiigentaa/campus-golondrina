@@ -441,12 +441,6 @@ body {
 @media (prefers-reduced-motion: reduce) {
   .golondrina-aviso { animation: none; }
 }
-/* Punto que late mientras Golondrina "envía" el aviso. */
-@keyframes golondrina-enviando-pulso { 50% { opacity: 0.3; } }
-.golondrina-enviando { animation: golondrina-enviando-pulso 0.8s ease-in-out infinite; }
-@media (prefers-reduced-motion: reduce) {
-  .golondrina-enviando { animation: none; }
-}
 
 /* Recorrido guiado «¿Cómo se usa?» (components/recorrido/RecorridoGuiado.tsx):
    borde amarillo en la parte iluminada y el resto de la página en penumbra. */

@@ -344,7 +344,7 @@ export default function AiTutorDrawer() {
         )}
 
         {activeLessonId && vista === "golondrina" ? (
-          <GolondrinaPanel key={activeLessonId} lessonTitle={activeLessonTitle ?? "esta lección"} />
+          <GolondrinaPanel key={activeLessonId} lessonId={activeLessonId} lessonTitle={activeLessonTitle ?? "esta lección"} />
         ) : !activeLessonId && isCourseDetailPage && coursePage?.loading ? (
           <div className="flex flex-1 items-center justify-center gap-2">
             <Loader2 className="text-primary size-5 animate-spin" aria-hidden />

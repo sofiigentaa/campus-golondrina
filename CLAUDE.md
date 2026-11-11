@@ -27,6 +27,8 @@ There is no test suite and no test runner configured. Type-check with `npx tsc -
 - `NEXT_PUBLIC_COURSES_SOURCE` — optional. `mock` serves the catalog/player from `data/*.mock.ts` (UI work without the backend). Unset = backend. **Never set it in production.** In API mode a backend failure surfaces as an error; it never silently falls back to mocks.
 - `NEXT_PUBLIC_CHAT_SOURCE` — optional. `mock` serves `/dashboard/chats` from `data/chat.mock.ts` (includes a per-course group room that the backend doesn't have). Unset = backend (`services/chat/`): direct messages only, alumno↔docente, over `GET /chat/contacts`, `GET/PATCH /chat/:otherUserId/...` and the `/chat` WebSocket namespace. **Never set it in production.**
 
+- `NEXT_PUBLIC_GOLONDRINA_SOURCE` — optional. `mock` simulates the Golondrina back (`/golondrina/me/...`) in memory (`services/golondrina/golondrina.service.ts`). Unset = backend; without the back module the panel says so (404) instead of faking it. **Never set it in production.**
+
 Pending work on both sides (and what is still mock) is tracked in `docs/PENDIENTES.md`.
 
 Path alias: `@/*` maps to the repo root.
